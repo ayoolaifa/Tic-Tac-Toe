@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="390dp"
+        android:layout_height="226dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.085">
+
+        <ImageView
+            android:id="@+id/imageViewLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/todo" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/username_login"
+        android:layout_width="378dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="104dp"
+        android:hint="@string/prompt_username"
+        android:inputType="textEmailAddress"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
+
+    <!--    <ProgressBar-->
+<!--        android:id="@+id/loading"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="94dp"-->
+<!--        android:visibility="visible"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="1.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/password_login"-->
+<!--        app:layout_constraintVertical_bias="0.0" />-->
+
+    <Button
+        android:id="@+id/sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:layout_gravity="start"
+        android:layout_marginTop="34dp"
+        android:text="   Login    "
+        android:drawableLeft="@drawable/baseline_login_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_login"
+        app:layout_constraintVertical_bias="0.114" />
+
+    <Button
+        android:id="@+id/button_mv_to_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:text="   Register    "
+        android:drawableLeft="@drawable/register_logo_2"
+        android:background="@drawable/rounded_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.727"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_login"
+        app:layout_constraintVertical_bias="0.114" />
+
+    <EditText
+        android:id="@+id/password_login"
+        android:layout_width="374dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/prompt_password"
+        android:imeActionLabel="@string/action_sign_in"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username_login" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

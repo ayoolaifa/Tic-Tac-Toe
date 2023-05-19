@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TicTacToe</title>
+
+    <!-- Change img -->
+	<link rel="icon" type="image/x-icon" href="img/logo.png">
+	
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link href="css/css.css" rel="stylesheet" >
+  </head>
+<body>
+
+<main>
+<div class="w-ful">
+	<div class="flex items-center justify-center py-10">
+        <!-- Change the numbers according to each window, so instead of saying 0 u can say "homewindow". -->
+        <!-- Also dont forget to change the ID's -->
+        <button class="px-2 active" id="suButton" onclick="openWindow('beforeUsing')">Starting Application</button>
+		<button class="px-2" id="homeButton" onclick="openWindow('homeScreen')">Home Screen</button>
+		<button class="px-2" id="singlePlayerButton" onclick="openWindow('singlePlayerScreen')">Single Player</button>
+		<button class="px-2" id="multiPlayerButton" onclick="openWindow('multiPlayerScreen')">Two Player</button>
+	</div>
+</div>
+
+
+<div class="w-ful">
+    <!-- This div shows and closes each window, so copy and paste the following div for each window to open/close -->
+    <!-- Also dont forget to change the ID according to your windows -->
+	<div id="beforeUsing" style="display:block;">
+
+        <!-- This div is for each box -->
+		<div class="p-5 drop-shadow-2xl shadow-2xl shadow-red-500 divBox">	
+            <p class="flex font-bold pb-3">Before Using Application</p>
+			<div class="flex mb-3">
+                <!-- Change the style width to what ever u want the img to be like, dont add a height otherwise u hard code it -->
+				<img class="h-auto max-w-full" src="img/Permission.png">		
+            </div>
+            <div class="flex mb-3">
+                <p>
+					<ul class="list-inside list-disc">
+						<li>Before using the application, you need to accept permission to utilise the full functionality of the application</li>
+						<li>If these permission are not accepted, then users cannot continue on to the application</li>
+					</ul>
+				</p>
+			</div>
+		</div>
+
+		<div class="p-5 drop-shadow-2xl shadow-2xl shadow-red-500 divBox">	
+            <p class="flex font-bold pb-3">Registration</p>
+			<div class="flex mb-3">
+                <!-- Change the style width to what ever u want the img to be like, dont add a height otherwise u hard code it -->
+				<img class="h-auto max-w-full" src="img/Register.png">		
+            </div>
+            <div class="flex mb-3">
+                <p>
+					<ul class="list-inside list-disc">
+						<li>To register and account on the application, user should type in thier desired username and password for the account</li>
+						<li>username and password fields cannot be empty</li>
+						<li>If username is available then the account and the password in the both the password fields match, the account will be successfully created</li>
+						<li>Once account registration is complete, then the user is automatically logged in</li>
+					</ul>
+				</p>
+			</div>
+		</div>
+
+		<div class="p-5 drop-shadow-2xl shadow-2xl shadow-red-500 divBox">	
+            <p class="flex font-bold pb-3">Logging In</p>
+			<div class="flex mb-3">
+                <!-- Change the style width to what ever u want the img to be like, dont add a height otherwise u hard code it -->
+				<img class="h-auto max-w-full" src="img/LogIn.png">		
+            </div>
+            <div class="flex mb-3">
+                <p>
+					<ul class="list-inside list-disc">
+						<li>User should input thier correct username and password inorder to successfully log into thier account</li>
+						<li>Again username and password fields cannot be empty</li>
+						<li>Login will be unsuccessful if the password inputted does not match password inputted upon account registration</li>
+					</ul>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div id="homeScreen" style="display:none;">
+
+        <!-- This div is for each box -->
+		<div class="p-5 drop-shadow-2xl shadow-2xl shadow-red-500 divBox">	
+            <p class="flex font-bold pb-3">Home Screen</p>
+			<div class="flex mb-3">
+                <!-- Change the style width to what ever u want the img to be like, dont add a height otherwise u hard code it -->
+				<img class="h-auto max-w-full" src="img/Main.png">
+            </div>
+            <div class="flex">
+                <p>
+					<ul  class="list-inside list-disc">
+						<li>Once successfully logged in, users can access all the functionality of the application</li>
+						<li>Users can log out of their account by clicking button in the top right hand corner</li>
+						<li>Users can access a settings page by clicking the settings button in the top right hand corner</li>
+						<li>Users can choose to play against a computer by clicking on single player button</li>
+						<li>Users can choose to play against another player by clicking on two player button</li>
+						<li>Users find a guide on how to play Tic-Tac-Toe by clicking the tutorial button</li>
+						<li>Users can view the leaderboard rankings for all users that have utilised the application</li>
+						<li>Through out the application, users can swipe on right edge of screen to return to the previous page they were on</li>
+					</ul>
+				</p>
+			</div>
+		</div>
+
+		<div class="p-5 drop-shadow-2xl shadow-2xl shadow-red-500 divBox">	
+            <p class="flex font-bold pb-3">Difficulty Page</p>
+			<div class="flex mb-3">
+                <!-- Change the style width to what ever u want the img to be like, dont add a height otherwise u hard code it -->
+				<img class="h-auto max-w-full" src="img/Difficulty.png">
+            </div>
+            <div class="flex">
+                <p>
+					<ul  class="list-inside list-disc">
+						<li>Users can choose how difficulty the computer can be from three options: easy, medium and hard</li>				
+						<li>Once option is choosen, the user can start the game</li>				
+					</ul>
+				</p>
+			</div>
+		</div>
+
+		<div class="p-5 drop-shadow-2xl shadow-2xl shadow-red-500 divBox">	
+            <p class="flex font-bold pb-3">Settings Page</p>
+			<div class="flex mb-3">
+                <!-- Change the style width to what ever u want the img to be like, dont add a height otherwise u hard code it -->
+				<img class="h-auto max-w-full" src="img/Settings.png">
+            </div>
+            <div class="flex">
+                <p>
+					<ul  class="list-inside list-disc">
+						<li>Users can see thier overall data from scores against computer</li>
+						<li>Data includes the player score and computer score on each difficulty available</li>
+						<li>Users can also share the application to other people by clicking the share button at top right hand corner</li>
+						<li>Users can access a settings page by clicking the settings button in the top right hand corner</li>
+					</ul>
+				</p>
+			</div>
+			<div class="flex mb-3">
+                <!-- Change the style width to what ever u want the img to be like, dont add a height otherwise u hard code it -->
+				<img class="h-auto max-w-" src="img/ShareActionProvider.png">
+            </div>
+		</div>
+
+		<div class="p-5 drop-shadow-2xl shadow-2xl shadow-red-500 divBox">	
+            <p class="flex font-bold pb-3">Leaderboard Page</p>
+			<div class="flex mb-3">
+                <!-- Change the style width to what ever u want the img to be like, dont add a height otherwise u hard code it -->
+				<img class="h-auto max-w-full" src="img/Leaderboard.png">
+            </div>
+            <div class="flex">
+                <p>
+					<ul  class="list-inside list-disc">
+						<li>Users can view thier leaderboard ranking in comparison to other users</li>
+						<li>Users can filter the leaderboard with the number of wins and the win percentage</li>
+						<li>These filters can be combined with the difficulty filter to give a more accurate ranking</li>					
+					</ul>
+				</p>
+			</div>
+		</div>
+
+	</div>
+	
+	<div id="singlePlayerScreen" style="display:none;">
+		<div class="p-5 drop-shadow-2xl shadow-2xl shadow-red-500 divBox">	
+			<p class="flex font-bold pb-3">Single Player Functionality Page</p>
+			<div class="flex mb-3">
+				<!-- Change the style width to what ever u want the img to be like, dont add a height otherwise u hard code it -->
+				<img class="h-auto max-w-full" src="img/SinglePlayer.png">
+			</div>
+			<div class="flex">
+				<p>
+					<ul  class="list-inside list-disc">
+						<li>User can play against the computer by clicking button on field where they wish to play</li>
+						<li>Once user has played, the computer will respond with is own move. This may take a second to register</li>
+						<li>Once the game has ended, the loser of the game will get to go first</li>
+						<li>Score counter is at the top left corner of the screen</li>
+						<li>If user does not make thier move in 30 seconds, a notification will remind them to finish thier game</li>
+						<li>User can reset board and score counter by clicking the reset button</li>
+						<li>User can return to the home screen by pressing the back button</li>
+						<li>User can return to difficulty page by utilising the edge swipe gesture</li>
+						<li>User can also return to thier previous game state when the screen is changed or when the app is closed</li>
+					</ul>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div id="multiPlayerScreen" style="display:none;">
+
+        <!-- This div is for each box -->
+		<div class="p-5 drop-shadow-2xl shadow-2xl shadow-red-500 divBox">	
+			<p class="flex font-bold pb-3">Two Player Functionality Page</p>
+			<div class="flex mb-3">
+				<!-- Change the style width to what ever u want the img to be like, dont add a height otherwise u hard code it -->
+				<img class="h-auto max-w-full" src="img/MultiPlayer.png">
+			</div>
+			<div class="flex">
+				<p>
+					<ul  class="list-inside list-disc">
+						<li>User can make thier move by clicking button on field where they wish to play</li>
+						<li>Once user has played, the other player can respond with thier own move. This may take a second to register</li>
+						<li>Once the game has ended, the loser of the game will get to go first in the next round</li>
+						<li>Score counter is at the top left corner of the screen to keep track of the score for this session</li>
+						<li>User can reset board and score counter by clicking the reset button</li>
+						<li>User can return to the home screen by pressing the back button</li>
+					</ul>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+    // Make sure to change the numbers to what u changed above 
+
+	function openWindow(window){
+		if (window === "beforeUsing") {
+
+            // this should be on each id for each div block
+            beforeUsing.style.display = "block";
+			homeScreen.style.display = "none";
+			singlePlayerScreen.style.display = "none";
+			multiPlayerScreen.style.display = "none";
+			
+            // this is just to display/remove the active link desingw
+            suButton.classList.add("active");
+			homeButton.classList.remove("active");
+			singlePlayerButton.classList.remove("active");
+			multiPlayerButton.classList.remove("active");
+
+		} else if (window === "homeScreen") {
+			// this should be on each id for each div block
+            beforeUsing.style.display = "none";
+			homeScreen.style.display = "block";
+			singlePlayerScreen.style.display = "none";
+			multiPlayerScreen.style.display = "none";
+			
+            // this is just to display/remove the active link desingw
+            suButton.classList.remove("active");
+			homeButton.classList.add("active");
+			singlePlayerButton.classList.remove("active");
+			multiPlayerButton.classList.remove("active");
+
+		} else if (window === "singlePlayerScreen") {
+			// this should be on each id for each div block
+			beforeUsing.style.display = "none";
+			homeScreen.style.display = "none";
+			singlePlayerScreen.style.display = "block";
+			multiPlayerScreen.style.display = "none";
+			
+            // this is just to display/remove the active link desingw
+            suButton.classList.remove("active");
+			homeButton.classList.remove("active");
+			singlePlayerButton.classList.add("active");
+			multiPlayerButton.classList.remove("active");
+
+		} else {
+			// this should be on each id for each div block
+			beforeUsing.style.display = "none";
+			homeScreen.style.display = "none";
+			singlePlayerScreen.style.display = "none";
+			multiPlayerScreen.style.display = "block";
+			
+            // this is just to display/remove the active link desingw
+            suButton.classList.remove("active");
+			homeButton.classList.remove("active");
+			singlePlayerButton.classList.remove("active");
+			multiPlayerButton.classList.add("active");
+
+        }
+	}
+</script>
+</main>
+</body>
+</html>

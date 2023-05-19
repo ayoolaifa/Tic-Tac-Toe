@@ -1,0 +1,14 @@
+/* Change the active accordingly to what ever u want */
+.active {
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 6px;
+}
+
+.divBox {
+	padding: 20px;
+	margin: 25px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: black;
+}

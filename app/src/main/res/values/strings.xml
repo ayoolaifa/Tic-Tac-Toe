@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name" translatable="false">Tic Tac Toe</string>
+
+    <string-array name="difficultyDropdown">
+        <item>Easy</item>
+        <item>Medium</item>
+        <item>Hard</item>
+    </string-array>
+
+    <string-array name="filterDropdown">
+        <item>Number Of Wins</item>
+        <item>Win Percentage</item>
+    </string-array>
+
+    <string name="title_activity_help_and_tutorial" translatable="false">HelpAndTutorial</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="single_player">Single Player</string>
+    <string name="multiplayer">Two Player</string>
+    <string name="tutorial">Tutorial</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="powered_by_aog">Powered By AOG</string>
+    <string name="todo">TODO</string>
+    <string name="player_0">Player: 0</string>
+    <string name="computer_0">Computer: 0</string>
+    <string name="reset">reset</string>
+    <string name="back">Back</string>
+    <string name="player_2_0">Player 2: 0</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_confirm_password">Confirm Password</string>
+    <string name="action_register">  Register</string>
+    <string name="action_sign_in">  Log in</string>
+    <string name="welcome">Welcome !</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">Log in failed</string>
+    <string name="log_out">   Log Out</string>
+    <string name="Table_Header">Number Of Wins</string>
+    <string name="settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="register">"  Register"</string>
+</resources>

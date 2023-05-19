@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_red"
+    tools:context=".SettingsActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout5"
+        android:layout_width="193dp"
+        android:layout_height="154dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.144">
+
+        <ImageView
+            android:id="@+id/imageViewSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/todo" />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:popupTheme="@style/ThemeTicTacToeActionBar">
+
+    </androidx.appcompat.widget.Toolbar>
+    
+    <TextView
+        android:id="@+id/username_settings"
+        android:layout_width="wrap_content"
+        android:background="@drawable/border"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:capitalize="words"
+        android:gravity="center"
+        android:text="TextView"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/viewScoreRelativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout5"
+        app:layout_constraintVertical_bias="0.85" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewScoreRelativeLayout"
+        android:layout_width="382dp"
+        android:layout_height="95dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <TableLayout
+            android:id="@+id/settingsTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/black" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Easy"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Medium"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Hard"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:background="@android:color/black" />
+
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/black" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Player Score"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/pScoreEasy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/pScoreMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/pScoreHard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:background="@android:color/black" />
+
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/black" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Computer Score"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/cScoreEasy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/cScoreMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/cScoreHard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:background="@android:color/black" />
+
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/black" />
+
+        </TableLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/userGuideBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_button"
+        android:drawableLeft="@drawable/baseline_info_24"
+        android:text="   User Guide      "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewScoreRelativeLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
